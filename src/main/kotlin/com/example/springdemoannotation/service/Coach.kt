@@ -1,4 +1,4 @@
-package com.example.springdemoannotation
+package com.example.springdemoannotation.service
 
 interface Coach {
     fun getDailyWorkout() : String
