@@ -10,7 +10,7 @@ fun main() {
     //read spring config file
     val context = ClassPathXmlApplicationContext("applicationContext.xml")
     //get the bean from spring container
-    val thatSillyCoach = context.getBean("thatSillyCoach", Coach::class.java)
+    val thatSillyCoach = context.getBean("tennisCoach", Coach::class.java)
     val gamer = context.getBean("gamer", Coach::class.java)
     //call a method on the bean
     println(thatSillyCoach.getDailyWorkout())

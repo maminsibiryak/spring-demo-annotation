@@ -14,3 +14,4 @@ For further reference, please consider the following sections:
 # Spring Demo Annotation
  * Annotations Overview - Component Scanning
     * Explicit Component Names
+    * Default Component Names
