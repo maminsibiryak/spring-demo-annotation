@@ -15,6 +15,7 @@ fun main() {
     //call a method on the bean
     println(thatSillyCoach.getDailyWorkout())
     println(gamer.getDailyWorkout())
+    println(thatSillyCoach.getDailyFortune())
     //close the context
     context.close()
 }
