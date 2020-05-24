@@ -3,10 +3,14 @@ package com.example.springdemoannotation.domain
 import com.example.springdemoannotation.service.Coach
 import com.example.springdemoannotation.service.FortuneService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Component
 
 @Component
 class TennisCoach() : Coach {
+    //field injection
+    @Autowired
+    @Qualifier("randomFortuneService")
     private lateinit var fortuneService: FortuneService
     //   constructor injection
     //    @Autowired
@@ -15,10 +19,10 @@ class TennisCoach() : Coach {
     //    }
 
     //setter injection
-    @Autowired
-    fun setFortuneService(fortuneService: FortuneService) {
+    /*@Autowired
+    fun doSomeCrazy(fortuneService: FortuneService) {
         this.fortuneService = fortuneService
-    }
+    }*/
 
     //constructor injection
     //  @Autowired

@@ -3,9 +3,6 @@ package com.example.springdemoannotation
 import com.example.springdemoannotation.service.Coach
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
-class AnnotationDemoApp {
-}
-
 fun main() {
     //read spring config file
     val context = ClassPathXmlApplicationContext("applicationContext.xml")
