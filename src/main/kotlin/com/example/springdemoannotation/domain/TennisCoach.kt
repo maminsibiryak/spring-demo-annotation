@@ -14,7 +14,7 @@ class TennisCoach() : Coach {
     private lateinit var fortuneService: FortuneService
     //   constructor injection
     //    @Autowired
-    //    constructor(theFortuneService: FortuneService) : this() {
+    //    constructor(@Qualifier("randomFortuneService") theFortuneService: FortuneService) : this() {
     //        this.fortuneService = theFortuneService
     //    }
 
