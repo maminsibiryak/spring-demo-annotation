@@ -9,15 +9,14 @@ fun main() {
 
     //retrieve bean from spring container
     val coach = context.getBean("tennisCoach", Coach::class.java)
-    val alphaCoach = context.getBean("tennisCoach", Coach::class.java)
+
 
     //check if they are the same
-    val result = coach == alphaCoach
+
 
     //print out the result
     println("coach memory location $coach")
-    println("alphaCoach memory location $alphaCoach")
-    println("result $result")
+
 
     context.close()
 }

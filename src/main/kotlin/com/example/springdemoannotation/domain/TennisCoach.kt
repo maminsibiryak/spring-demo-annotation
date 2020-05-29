@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Scope
 import org.springframework.stereotype.Component
+import javax.annotation.PostConstruct
+import javax.annotation.PreDestroy
 
 @Component
-@Scope("prototype")
+@Scope("singleton")
 class TennisCoach() : Coach {
     //field injection
     @Autowired
@@ -29,6 +31,18 @@ class TennisCoach() : Coach {
     //constructor injection
     //  @Autowired
     //   private var fortuneServiceBad: FortuneService = theFortuneService
+
+    //define my init method
+    @PostConstruct
+    fun doMyStartupStaff() {
+        println(">>TennisCoach : inside of doMyStartupStaff()")
+    }
+
+    //define my destroy method
+    @PreDestroy
+    fun doMyCleanupStaff() {
+        println(">>TennisCoach : inside of doMyCleanupStaff()")
+    }
 
     override fun getDailyWorkout(): String {
         return "Practice your backhand volley"
