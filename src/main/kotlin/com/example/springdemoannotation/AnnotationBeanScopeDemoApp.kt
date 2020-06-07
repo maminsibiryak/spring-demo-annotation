@@ -10,9 +10,7 @@ fun main() {
     //retrieve bean from spring container
     val coach = context.getBean("tennisCoach", Coach::class.java)
 
-
     //check if they are the same
-
 
     //print out the result
     println("coach memory location $coach")
