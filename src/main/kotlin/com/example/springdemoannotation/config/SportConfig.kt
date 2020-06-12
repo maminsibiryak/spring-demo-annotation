@@ -1,7 +1,9 @@
 package com.example.springdemoannotation.config
 
+import com.example.springdemoannotation.domain.ShootCoach
 import com.example.springdemoannotation.domain.SwimUdemyCoach
 import com.example.springdemoannotation.service.Coach
+import com.example.springdemoannotation.service.FileFortuneService
 import com.example.springdemoannotation.service.FortuneService
 import com.example.springdemoannotation.service.SadFortuneService
 import org.springframework.context.annotation.Bean
@@ -23,5 +25,15 @@ class SportConfig {
     @Bean
     fun swimUdemyCoach(): Coach {
         return SwimUdemyCoach(sadFortuneService())
+    }
+
+    @Bean
+    fun fileFortuneService(): FortuneService {
+        return FileFortuneService()
+    }
+
+    @Bean
+    fun shootCoach(): Coach {
+        return ShootCoach(fileFortuneService())
     }
 }
